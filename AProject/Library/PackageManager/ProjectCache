@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637647716790503663
+      ticks: 637647725415631022
     m_Hash: 4004326711
   m_LockFileStatus:
     m_FilePath: C:/Users/ljia0/Documents/Test/AProject/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637647716798001063
+      ticks: 637647725424378355
     m_Hash: 157013556
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
