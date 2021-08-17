@@ -22,6 +22,7 @@ public class ClickImaged : MonoBehaviour
     }
     void ChangeSprite()
     {
+        newSprite = Resources.Load<Sprite>("1");
         spriteRenderer.sprite = newSprite;
     }
 }
