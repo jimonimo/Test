@@ -5,24 +5,49 @@ using UnityEngine;
 
 public class ClickImaged : MonoBehaviour
 {
-    public Image[] images = new Image[2];
-    public bool isClick;
+    private static ClickImaged _instance;
+    public static ClickImaged Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = new ClickImaged();
+            }
+            return _instance;
+        }
+    }
+    private void Awake()
+    {
+        _instance = this;
+    }
+
     public SpriteRenderer spriteRenderer;
-    public Sprite newSprite;
+    public string log;
 
-    void Start()
+    
+    public void ChangeSprite()
     {
-        isClick = false;
-        //spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-    }
-
-    public void ChangeImage()
-    {
-        ChangeSprite();
-    }
-    void ChangeSprite()
-    {
-        newSprite = Resources.Load<Sprite>("1");
+        /*
+        if (log == "0")
+        {
+            log = "1";
+            Sprite newSprite = Resources.Load<Sprite>(log);
+            spriteRenderer.sprite = newSprite;
+        }
+        else if (log == "1")
+        {
+            log = "0";
+            Sprite newSprite = Resources.Load<Sprite>(log);
+            spriteRenderer.sprite = newSprite;
+        }
+        */
+        Sprite newSprite = Resources.Load<Sprite>(log);
         spriteRenderer.sprite = newSprite;
+    }
+    //외부에서 로그이름을 바꾸는 코드
+    public void ChangeLog(string _log)
+    {
+        log = _log;
     }
 }
