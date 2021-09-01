@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class SaveLoadManager : MonoBehaviour
 {
@@ -31,16 +32,30 @@ public class SaveLoadManager : MonoBehaviour
         }
     }
     #endregion
+
+    #region UI
+    public Button setBtn;
+    public GameObject setPopup;
+
+    public void ShowPopup()
+    {
+        setPopup.SetActive(!setPopup.activeSelf);
+    }
     
+    #endregion
+
     void Start()
     {
-        
     }
 
     void Update()
     {
         
     }
+
+    #region SAVE
+
+    #endregion
 }
 [Serializable]
 public struct GameInfo
